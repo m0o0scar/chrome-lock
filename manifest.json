@@ -28,5 +28,18 @@
     "tabs",
     "storage",
     "activeTab"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/assets/lock/index.html",
+        "src/assets/lock/index.mjs",
+        "src/assets/lock/index.css"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
   ]
 }
