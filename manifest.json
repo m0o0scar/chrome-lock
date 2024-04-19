@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Lock",
+  "version": "1.0.0",
+  "options_page": "src/options/index.html",
+  "icons": {
+    "128": "src/assets/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "src/contentScript/index.js"
+      ],
+      "css": [
+        "src/contentScript/index.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  ]
+}
